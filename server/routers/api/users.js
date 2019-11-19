@@ -54,7 +54,7 @@ router.post('/login', (req,res) => {
     User.findOne({email})
          .then((user) => {
              if(user)//存在用户名 
-             {
+             { 
                  //密码匹配
                bcrypt.compare(password, user.password)
                      .then((isMatch) => {
